@@ -1,9 +1,14 @@
 import React, { Component } from "react";
+import Player from "./player";
 
 class PlayerTable extends Component {
   state = {};
   render() {
-    return <table></table>;
+    return (
+      <table>
+        <Player />
+      </table>
+    );
   }
 }
 

@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import PlayerTable from "./components/PlayerTable";
-import ItemTable from "./compoenenst/ItemTable";
+import PlayerTable from "./PlayerTable/playertable";
+import ItemTable from "./ItemTable/itemtable";
 import { getItems } from "../assets/item";
+import { getPersons } from "../assets/person";
 
 class Session extends Component {
   state = {
@@ -11,7 +12,7 @@ class Session extends Component {
   render() {
     return (
       <React.Fragment>
-        <ItemsTable items={this.state.items}></ItemsTable>
+        <ItemTable items={this.state.items}></ItemTable>
         <PlayerTable persons={this.state.persons}></PlayerTable>
       </React.Fragment>
     );

@@ -4,8 +4,10 @@ import Player from "../PlayerTable/player";
 class PlayerTable extends Component {
   state = {};
   render() {
+    const persons = this.props.persons;
+
     return (
-      <table>
+      <table class="table">
         <thead>
           <tr>
             <th scope="col">In-game Name</th>
@@ -15,7 +17,9 @@ class PlayerTable extends Component {
             <th scope="col">Time Out</th>
           </tr>
         </thead>
-        <Player />
+        {persons.map((person) => (
+          <Player person={person}></Player>
+        ))}
       </table>
     );
   }
